@@ -16,8 +16,11 @@
 
 // components
 @import
+  'components/moustache',
   'components/buttons';
 
 // layout
 @import
-  'layout/header';
+  'layout/header',
+  'layout/body',
+  'layout/container';
