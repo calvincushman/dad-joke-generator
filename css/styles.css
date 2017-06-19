@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+[class*="joke"] {
+  display: none;
+  position: absolute;
+  width: 50%;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  background-color: tomato;
+  color: white;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
 @keyframes mou {
   0% {
     left: 1000px;
@@ -112,10 +126,268 @@
   width: 51px;
 }
 
+@keyframes dance {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.hamburger {
+  top: 30%;
+  height: 200px;
+  width: 300px;
+  background: inherit;
+  display: block;
+  animation: dance 1s infinite alternate ease-in-out;
+  margin: auto;
+}
+
+.top-bun {
+  position: absolute;
+  left: 35%;
+  height: 40px;
+  width: 30%;
+  top: 25%;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background: #f7b243;
+  z-index: 100;
+}
+
+.fillings {
+  position: relative;
+  left: 35%;
+  height: 20%;
+  width: 30%;
+  top: 30%;
+}
+
+.bottom-bun {
+  position: absolute;
+  left: 35%;
+  height: 27px;
+  width: 30%;
+  bottom: 20%;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background: #f7b243;
+}
+
+.tomato {
+  position: absolute;
+  bottom: -20%;
+  height: 23%;
+  width: 110%;
+  left: -5%;
+  background: #ff5233;
+  border-radius: 50px;
+}
+
+.lettuce {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background: #63AF44;
+  bottom: -35%;
+}
+
+.meat {
+  position: absolute;
+  height: 33%;
+  width: 110%;
+  left: -5%;
+  bottom: -63%;
+  background: #663E2F;
+  border-radius: 50px;
+}
+
+.cheese {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  background: #F5DF3B;
+  bottom: -36%;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+.cheese-triangle {
+  -webkit-clip-path: polygon(71% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(71% 0, 0% 100%, 100% 100%);
+  position: absolute;
+  bottom: -100%;
+  height: 290%;
+  width: 20%;
+  right: 0%;
+  transform: rotate(37deg);
+  background: #F5DF3B;
+  border-radius: 5px;
+}
+
+.meat-overlay {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background: #795446;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  top: 0%;
+}
+
+.meat-circle-1 {
+  position: absolute;
+  height: 75%;
+  top: 5%;
+  width: 35%;
+  background: #795446;
+  border-radius: 50%;
+  left: 2%;
+}
+
+.meat-circle-2 {
+  position: absolute;
+  height: 75%;
+  top: 5%;
+  width: 30%;
+  background: #795446;
+  border-radius: 50%;
+  left: 35%;
+}
+
+.meat-circle-3 {
+  position: absolute;
+  height: 73%;
+  top: 5%;
+  width: 35%;
+  background: #795446;
+  border-radius: 50%;
+  left: 65%;
+}
+
+[class*="seed"] {
+  position: absolute;
+  height: 8%;
+  width: 8%;
+  background: white;
+  border-radius: 45%;
+  opacity: 0.3;
+  transform: rotate(10deg);
+}
+
+.seed-1 {
+  top: 25%;
+  right: 25%;
+}
+
+.seed-2 {
+  top: 45%;
+  right: 35%;
+  transform: rotate(30deg);
+}
+
+.seed-3 {
+  top: 25%;
+  right: 45%;
+  z-index: 9000;
+  transition: top 1s cubic-bezier(1, 0.45, 0.56, 1.12);
+}
+
+.seed-4 {
+  top: 75%;
+  right: 23%;
+  transform: rotate(25deg);
+}
+
+.seed-5 {
+  top: 60%;
+  right: 10%;
+  transition: top 1s cubic-bezier(1, 0.45, 0.56, 1.12);
+}
+
+.seed-6 {
+  top: 25%;
+  left: 25%;
+  transform: rotate(20deg);
+}
+
+.seed-7 {
+  top: 45%;
+  left: 35%;
+}
+
+.seed-8 {
+  top: 75%;
+  left: 25%;
+  transition: top 1s cubic-bezier(1, 0.45, 0.56, 1.12);
+}
+
+.seed-9 {
+  top: 60%;
+  left: 10%;
+  transform: rotate(35deg);
+}
+
+.seed-10 {
+  top: 60%;
+  left: 50%;
+}
+
+.hamburger-active {
+  animation: none;
+}
+.hamburger-active .top-bun {
+  height: 30px;
+  width: 100px;
+  top: 46.2%;
+  left: 44.5%;
+  transform: translateY(32%);
+}
+.hamburger-active .fillings {
+  height: 15%;
+  width: 35%;
+  top: 37%;
+  left: 32.5%;
+}
+.hamburger-active .fillings .cheese-triangle {
+  bottom: -250%;
+  height: 500%;
+  width: 30%;
+  right: -5%;
+  transform: rotate(27deg);
+  border-radius: 5px;
+}
+.hamburger-active .bottom-bun {
+  height: 22px;
+  width: 100px;
+  left: 44.5%;
+  top: 53.4%;
+  transform: translateY(-50%);
+}
+
 .container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+h1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*# sourceMappingURL=styles.css.map */
