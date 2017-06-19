@@ -16,6 +16,7 @@
 
 // components
 @import
+  'components/jokes',
   'components/moustache',
   'components/buttons';
 
@@ -24,3 +25,10 @@
   'layout/header',
   'layout/body',
   'layout/container';
+
+h1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
