@@ -50,7 +50,7 @@
   top: 90.8%;
   left: 28.5%;
   transform: translateY(-19.2%);
-  color: black;
+  color: tomato;
   padding: 22px 15px;
   padding-left: 30px;
   font-size: 1.2em;
@@ -58,6 +58,11 @@
   border: 3px solid black;
   overflow: hidden;
   z-index: -100;
+  width: 44%;
+  text-align: center;
+  background-repeat: repeat;
+  background-image: url(../img/dotted-line2.png);
+  background-size: 100px 40px;
 }
 
 @keyframes mou {
@@ -653,6 +658,42 @@ body {
   z-index: -50;
 }
 
+.moose {
+  position: absolute;
+  width: 160px;
+  height: auto;
+  top: 41.3%;
+  left: 50%;
+  transform: translate(-50%, -58.7%);
+  animation: moose-30 30s 2s infinite;
+}
+
+.moose:hover {
+  animation: moose-hover .4s ease-in;
+}
+
+@keyframes moose-hover {
+  0%, 100% {
+    transform: translate(-50%, -58.7%);
+  }
+  25%, 75% {
+    transform: translate(-50%, -58.7%) rotate(10deg);
+  }
+  50% {
+    transform: translate(-50%, -58.7%) rotate(-10deg);
+  }
+}
+@keyframes moose-30 {
+  0%, 5%, 100% {
+    transform: translate(-50%, -58.7%);
+  }
+  1.25%, 3.75% {
+    transform: translate(-50%, -58.7%) rotate(10deg);
+  }
+  2.5% {
+    transform: translate(-50%, -58.7%) rotate(-10deg);
+  }
+}
 .container {
   width: 100vw;
   height: 100vh;
