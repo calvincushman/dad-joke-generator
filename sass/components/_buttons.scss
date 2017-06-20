@@ -1,22 +1,22 @@
 @keyframes dance {
   0% {
-
-  }
-  50% {
+    height: 200px;
+    width: 300px;
   }
   100% {
+    height: 210px;
+    width: 330px;
   }
 }
 
 .hamburger {
   height: 200px;
   width: 300px;
-  animation: dance 1s infinite alternate ease-in-out;
-  // animation: none;
+  animation: dance 1s infinite 1s alternate ease-in-out;
   position: absolute;
-  top: 65%;
+  top: 64%;
   left: 50%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%, -36%);
 }
 
 .top-bun{
@@ -211,9 +211,6 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
 .hamburger-active {
   animation: none;
   position: absolute;
-  // top: 65%;
-  // left: 59.5%;
-  // transform: translate(-41.5%, -35%);
   .top-bun {
     height: 30px;
     width: 100px;
@@ -238,6 +235,6 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
     height: 22px;
     width: 100px;
     left: 33%;
-    top: 62.8%;
+    top: 62.9%;
   }
 }

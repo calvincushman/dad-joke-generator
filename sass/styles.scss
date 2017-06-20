@@ -32,4 +32,8 @@ h1 {
   top: 67%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
 }
