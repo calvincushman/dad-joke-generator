@@ -3,5 +3,17 @@ body {
   background-image: url(../img/background.png);
   background-size: cover;
   background-position: center;
-  font-family: sans-serif;
+  font-family: 'Pangolin', cursive;
+}
+
+.tp-sheet {
+  width: 45%;
+  height: 140px;
+  border-radius: 5px;
+  background: white;
+  z-index: 1;
+  position: absolute;
+  top: 87%;
+  left: 28%;
+  z-index: -50;
 }

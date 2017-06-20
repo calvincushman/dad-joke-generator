@@ -8,7 +8,7 @@ $(document).ready(function() {
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active');
       $('.question').hide();
-      $('.answer').show();
+      $('.answer').show('slide', {direction: 'left'}, 1000);
       $('.headtop').removeClass('head-animation');
 
       setTimeout(function(){
@@ -18,8 +18,12 @@ $(document).ready(function() {
       $(this).addClass('hamburger-active');
       $('[class*="joke"]').hide();
       $('.joke' + random).show();
+      $('.tp-sheet').show();
+      setTimeout(function(){
+          $('.tp-sheet').hide('slide', {direction: 'right'}, 1000);
+      }, 5200);
       $('.answer').hide();
-      $('.question').show();
+      $('.question').show('slide', {direction: 'left'}, 1000);
       $('.headtop').addClass('head-animation');
       setTimeout(function(){
           $(".roll-img").addClass("tp-animation");
