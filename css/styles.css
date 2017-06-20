@@ -47,15 +47,17 @@
 [class*="joke"] {
   display: none;
   position: absolute;
-  width: 50%;
-  top: 92%;
-  left: 30%;
-  transform: translateY(-18%);
-  margin-right: -50%;
-  background-color: tomato;
-  color: white;
-  padding: 15px 10px;
+  top: 90.8%;
+  left: 28.5%;
+  transform: translateY(-19.2%);
+  color: black;
+  padding: 22px 15px;
+  padding-left: 30px;
+  font-size: 1.2em;
   border-radius: 5px;
+  border: 3px solid black;
+  overflow: hidden;
+  z-index: -100;
 }
 
 @keyframes mou {
@@ -636,7 +638,19 @@ body {
   background-image: url(../img/background.png);
   background-size: cover;
   background-position: center;
-  font-family: sans-serif;
+  font-family: 'Pangolin', cursive;
+}
+
+.tp-sheet {
+  width: 45%;
+  height: 140px;
+  border-radius: 5px;
+  background: white;
+  z-index: 1;
+  position: absolute;
+  top: 87%;
+  left: 28%;
+  z-index: -50;
 }
 
 .container {
@@ -652,6 +666,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -20%);
   width: 100%;
+  font-size: 1.5em;
   text-align: center;
   white-space: pre;
   pointer-events: none;
