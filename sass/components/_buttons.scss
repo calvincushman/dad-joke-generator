@@ -1,29 +1,22 @@
 @keyframes dance {
   0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
+
   }
   50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-20deg);
   }
   100% {
-    transform: rotate(0);
   }
 }
 
 .hamburger {
-  top: 30%;
   height: 200px;
   width: 300px;
-  background: inherit;
-  display: block;
   animation: dance 1s infinite alternate ease-in-out;
-  margin: auto;
+  // animation: none;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -35%);
 }
 
 .top-bun{
@@ -217,16 +210,15 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
 
 .hamburger-active {
   animation: none;
+  position: absolute;
+  // top: 65%;
+  // left: 59.5%;
+  // transform: translate(-41.5%, -35%);
   .top-bun {
     height: 30px;
     width: 100px;
-    top: 46.2%;
-    left: 44.5%;
-    transform: translateY(32%);
-    // .seed-3, .seed-5, .seed-8 {
-    //   top: 300%;
-    //   transform: rotate(0deg);
-    // }
+    top: 35%;
+    left: 33%;
   }
   .fillings {
       height: 15%;
@@ -245,8 +237,7 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
   .bottom-bun {
     height: 22px;
     width: 100px;
-    left: 44.5%;
-    top: 53.4%;
-    transform: translateY(-50%);
+    left: 33%;
+    top: 62.8%;
   }
 }
