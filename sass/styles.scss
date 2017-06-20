@@ -18,7 +18,8 @@
 @import
   'components/jokes',
   'components/moustache',
-  'components/buttons';
+  'components/buttons',
+  'components/toilet-paper';
 
 // layout
 @import
@@ -28,7 +29,7 @@
 
 h1 {
   position: absolute;
-  top: 60%;
+  top: 67%;
   left: 50%;
   transform: translateX(-50%);
 }

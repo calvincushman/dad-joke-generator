@@ -1,6 +1,6 @@
 @keyframes mou {
   0% {
-    left: 1000px;
+    left: -300%;
     transform: rotate(45deg);
   }
   10%, 30%, 50%, 70%, 90% {
@@ -10,14 +10,14 @@
     transform: rotate(45deg);
   }
   100%{
-    left: 80px;
+    left: 400%;
     transform: rotate(45deg);
   }
 }
 
 @keyframes stashe {
   0% {
-    left: 920px;
+    left: -352.5%;
     transform: rotate(-45deg);
   }
   10%, 30%, 50%, 70%, 90% {
@@ -27,7 +27,7 @@
     transform: rotate(-45deg);
   }
   100%{
-    left: 0px;
+    left: 347.5%;
     transform: rotate(-45deg);
   }
 }
@@ -35,8 +35,9 @@
 $light: white;
 $dark: #2f3245;
 .moustache{
-  display: none;
-  position: relative;
+  top: 72%;
+  left: -190px;
+  position: absolute;
   width: 150px;
   margin: 100px auto;
 }
@@ -61,7 +62,7 @@ $dark: #2f3245;
   transform: rotate(45deg);
   z-index: 5;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
-  // animation: mou 3s ease-in infinite 3s;
+  animation: mou 2.5s ease-in 2 alternate 1s;
 }
 .mou:before{
   left: 25px;
@@ -86,7 +87,7 @@ $dark: #2f3245;
   z-index: 15;
   left: 0;
   box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: stashe 3s ease-in infinite 3s;
+  animation: stashe 2.5s ease-in 2 alternate 1s;
 }
 .stache:before{
   left: 0;

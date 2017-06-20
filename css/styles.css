@@ -9,9 +9,9 @@
   position: absolute;
   width: 50%;
   top: 80%;
-  left: 50%;
+  left: 30%;
+  transform: translateY(-20%);
   margin-right: -50%;
-  transform: translateX(-50%);
   background-color: tomato;
   color: white;
   padding: 15px 10px;
@@ -20,7 +20,7 @@
 
 @keyframes mou {
   0% {
-    left: 1000px;
+    left: -300%;
     transform: rotate(45deg);
   }
   10%, 30%, 50%, 70%, 90% {
@@ -30,13 +30,13 @@
     transform: rotate(45deg);
   }
   100% {
-    left: 80px;
+    left: 400%;
     transform: rotate(45deg);
   }
 }
 @keyframes stashe {
   0% {
-    left: 920px;
+    left: -352.5%;
     transform: rotate(-45deg);
   }
   10%, 30%, 50%, 70%, 90% {
@@ -46,13 +46,14 @@
     transform: rotate(-45deg);
   }
   100% {
-    left: 0px;
+    left: 347.5%;
     transform: rotate(-45deg);
   }
 }
 .moustache {
-  display: none;
-  position: relative;
+  top: 72%;
+  left: -190px;
+  position: absolute;
   width: 150px;
   margin: 100px auto;
 }
@@ -80,6 +81,7 @@
   transform: rotate(45deg);
   z-index: 5;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+  animation: mou 2.5s ease-in 2 alternate 1s;
 }
 
 .mou:before {
@@ -107,7 +109,7 @@
   z-index: 15;
   left: 0;
   box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: stashe 3s ease-in infinite 3s;
+  animation: stashe 2.5s ease-in 2 alternate 1s;
 }
 
 .stache:before {
@@ -126,31 +128,14 @@
   width: 51px;
 }
 
-@keyframes dance {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .hamburger {
-  top: 30%;
   height: 200px;
   width: 300px;
-  background: inherit;
-  display: block;
   animation: dance 1s infinite alternate ease-in-out;
-  margin: auto;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -35%);
 }
 
 .top-bun {
@@ -345,13 +330,13 @@
 
 .hamburger-active {
   animation: none;
+  position: absolute;
 }
 .hamburger-active .top-bun {
   height: 30px;
   width: 100px;
-  top: 46.2%;
-  left: 44.5%;
-  transform: translateY(32%);
+  top: 35%;
+  left: 33%;
 }
 .hamburger-active .fillings {
   height: 15%;
@@ -370,9 +355,17 @@
 .hamburger-active .bottom-bun {
   height: 22px;
   width: 100px;
-  left: 44.5%;
-  top: 53.4%;
-  transform: translateY(-50%);
+  left: 33%;
+  top: 62.8%;
+}
+
+.roll img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 28%;
+  top: 79%;
+  transform: translate(-72%, -21%);
 }
 
 body {
@@ -388,7 +381,7 @@ body {
 
 h1 {
   position: absolute;
-  top: 60%;
+  top: 67%;
   left: 50%;
   transform: translateX(-50%);
 }
