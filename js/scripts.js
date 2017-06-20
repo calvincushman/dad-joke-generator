@@ -9,12 +9,21 @@ $(document).ready(function() {
       $(this).removeClass('hamburger-active');
       $('.question').hide();
       $('.answer').show();
+      $('.headtop').removeClass('head-animation');
+
+      setTimeout(function(){
+          $(".roll-img").removeClass("tp-animation");
+      }, 3000);
     } else {
       $(this).addClass('hamburger-active');
       $('[class*="joke"]').hide();
       $('.joke' + random).show();
       $('.answer').hide();
       $('.question').show();
+      $('.headtop').addClass('head-animation');
+      setTimeout(function(){
+          $(".roll-img").addClass("tp-animation");
+      }, 1000);
     }
   });
 
