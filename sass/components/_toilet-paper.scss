@@ -1,8 +1,8 @@
 @keyframes roll-animation{
   0% {
     left: 50%;
-    top: 40%;
-    transform: translate(-50%, -70%) rotate(45deg);
+    top: 20%;
+    transform: translate(-50%, -75%) rotate(45deg);
    }
   15% {
     left: 70%;
@@ -16,30 +16,34 @@
    }
   90% {
     left: 20%;
-    top: 79%;
+    top: 89%;
     transform: translate(-80%, -21%) rotate(-450deg);
    }
   95% {
     left: 24%;
-    top: 77%;
+    top: 87%;
     transform: translate(-76%, -23%) rotate(-405deg);
   }
   100% {
     left: 28%;
-    top: 79%;
+    top: 89%;
     transform: translate(-72%, -21%);
   }
 }
 
-.roll img {
+.roll-img {
+  background-color: white;
   width: 100px;
-  height: 100px;
+  height: 120px;
   position: absolute;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -70%) rotate(45deg);
+  top: 25%;
+  transform: translate(-50%, -80%) rotate(45deg);
+  z-index: -3;
+  opacity: 0;
 }
 
-.animation1 {
-  animation: roll-animation 4s ease-out 1s 1 forwards;
+.tp-animation {
+  animation: roll-animation 4s ease-out 1 forwards;
+  opacity: 1;
 }
