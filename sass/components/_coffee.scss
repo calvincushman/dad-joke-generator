@@ -40,13 +40,13 @@
 
 .coffeespill {
   .mug {
-    top: 56.5%;
-    left: 65%;
+    top: 57%;
+    left: 41%;
     position: absolute;
     background: #dce0e8;
     width: 200px;
     height: 190px;
-    transform-origin: bottom left;
+    transform: translate(-59%, -43%);
     animation: spill 5s forwards;
     h1 {
       position: absolute;
