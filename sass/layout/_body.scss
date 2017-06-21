@@ -6,6 +6,18 @@ body {
   font-family: 'Pangolin', cursive;
 }
 
+h1 {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+}
+
 .tp-sheet {
   width: 45%;
   height: 140px;
@@ -18,40 +30,40 @@ body {
   z-index: -50;
 }
 
-.moose {
+#moose {
   position: absolute;
   width: 160px;
   height: auto;
-  top: 41.3%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%,-58.7%);
-  animation: moose-30 30s 2s infinite;
+  transform: translate(-50%,-55%);
+  // animation: moose-30 30s 2s infinite;
 }
 
 .moose:hover {
-  animation: moose-hover .4s ease-in;
+  // animation: moose-hover .4s ease-in;
 }
 
 @keyframes moose-hover {
   0%, 100% {
-    transform: translate(-50%,-58.7%);
+    transform: translate(-50%,-59%);
   }
   25%, 75% {
-    transform: translate(-50%,-58.7%) rotate(10deg);
+    transform: translate(-50%,-59%) rotate(10deg);
   }
   50% {
-    transform: translate(-50%,-58.7%) rotate(-10deg);
+    transform: translate(-50%,-59%) rotate(-10deg);
   }
 }
 
 @keyframes moose-30 {
   0%, 5%, 100% {
-    transform: translate(-50%,-58.7%);
+    transform: translate(-50%,-59%);
   }
   1.25%, 3.75% {
-    transform: translate(-50%,-58.7%) rotate(10deg);
+    transform: translate(-50%,-59%) rotate(10deg);
   }
   2.5% {
-    transform: translate(-50%,-58.7%) rotate(-10deg);
+    transform: translate(-50%,-59%) rotate(-10deg);
   }
 }
