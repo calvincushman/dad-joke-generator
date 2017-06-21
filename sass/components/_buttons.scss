@@ -17,6 +17,11 @@
   left: 50%;
   transform: translate(-50%, -27.2%);
   z-index: 1000;
+  @include respond-to('vertical2') {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%) scale(.7);
+  };
 }
 
 .top-bun{

@@ -94,13 +94,14 @@
   }
   100%{
     transform: rotate(-3deg);
-    left: 180%;
+    left: calc(100vw - 400px);
   }
 }
 
 .crabs {
   position: absolute;
   top: 0;
+  left: 0%;
   width: 400px;
   z-index: -100;
   .crab {
