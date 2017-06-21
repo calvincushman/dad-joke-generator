@@ -1,0 +1,43 @@
+@keyframes grassy {
+  0% {
+    top: 400px;
+    left: 4%;
+  }
+  100% {
+    top: 400px;
+    left: 150%;
+  }
+}
+
+@keyframes lawn-mower {
+  0% {
+    top: 200px;
+    left: -10%;
+  }
+  100% {
+    top: 200px;
+    left: 150%;
+  }
+}
+
+.mow-contain {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+  .grass {
+    position: absolute;
+    width: 800px;
+    top: 400px;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    animation: grassy 6s ease infinite;
+  }
+
+  .mower {
+    width: 300px;
+    position: absolute;
+    top: 180px;
+    left: -10%;
+    animation: lawn-mower 6s ease infinite;
+  }
+}

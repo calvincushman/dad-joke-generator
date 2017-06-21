@@ -1,0 +1,12 @@
+.football-contain img {
+  position: absolute;
+  bottom: 30%;
+  right: 30%;
+  width: 5%;
+  animation: toss 2s forwards;
+}
+
+@keyframes toss {
+  0% {right: 30%;}
+  100% {right: 50%; width: 20%}
+}

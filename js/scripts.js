@@ -5,8 +5,8 @@ function getRandomArbitrary(min, max) {
 $(document).ready(function() {
   $('.hamburger').click(function () {
     // get random number from 1 to (number of jokes)
-    var random = getRandomArbitrary(1, 24);
-    var randomAnime = getRandomArbitrary(1, 8);
+    var randomJoke = getRandomArbitrary(1, 40);
+    var randomAnime = getRandomArbitrary(1, 11);
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
@@ -21,7 +21,7 @@ $(document).ready(function() {
       $(this).addClass('hamburger-active'); //keeps track of state
       $(".roll-img").removeClass("tp-activate");  //hide tp
       $('[class*="joke"]').hide(); //hide all old jokes
-      $('.joke' + random).show();
+      $('.joke' + randomJoke).show();
       $('.tp-sheet').show(); //white box hiding joke appears
       setTimeout(function(){
         $('.tp-sheet').hide('slide', {direction: 'right'}, 1000); //white box hiding joke slides away after 5.2 seconds

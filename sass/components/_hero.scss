@@ -1,0 +1,9 @@
+#hero {
+  position: absolute;
+  animation: fly 5s forwards;
+  bottom: 10%;
+}
+@keyframes fly {
+  0% {left: -500px}
+  100% {left: 100%; bottom: 60%;}
+}
