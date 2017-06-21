@@ -35,8 +35,8 @@ h1 {
   width: 160px;
   height: auto;
   top: 44%;
-  left: 50%;
-  transform: translate(-50%,-56%);
+  left: 49%;
+  transform: translate(-51%,-56%);
   animation: moose-30 30s 2s infinite;
 }
 
@@ -46,25 +46,25 @@ h1 {
 
 @keyframes moose-hover {
   0%, 100% {
-    transform: translate(-50%,-56%);
+    transform: translate(-51%,-56%);
   }
   25%, 75% {
-    transform: translate(-50%,-56%) rotate(10deg);
+    transform: translate(-51%,-56%) rotate(10deg);
   }
   50% {
-    transform: translate(-50%,-56%) rotate(-10deg);
+    transform: translate(-51%,-56%) rotate(-10deg);
   }
 }
 
 @keyframes moose-30 {
   0%, 5%, 100% {
-    transform: translate(-50%,-56%);
+    transform: translate(-51%,-56%);
   }
   1.25%, 3.75% {
-    transform: translate(-50%,-56%) rotate(10deg);
+    transform: translate(-51%,-56%) rotate(10deg);
   }
   2.5% {
-    transform: translate(-50%,-56%) rotate(-10deg);
+    transform: translate(-51%,-56%) rotate(-10deg);
   }
 }
 

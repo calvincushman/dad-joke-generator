@@ -1,0 +1,284 @@
+@keyframes mouth {
+  0% {
+      height: 10px;
+  }
+
+  100%{
+      height: 50px;
+  }
+}
+
+@keyframes clawr {
+  0% {
+      transform: rotate(45deg);
+  }
+
+  100%{
+      transform: rotate(90deg);
+  }
+}
+
+@keyframes clawl {
+  0% {
+      transform: rotate(-45deg);
+  }
+
+  100%{
+      transform: rotate(-90deg);
+  }
+}
+
+@keyframes eye {
+  0% {
+    transform: rotate(60deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(80deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(27deg);
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes leftlegs {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes rightlegs {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes crawl {
+  0%{
+    left: 0px;
+  }
+  10%{
+    transform: rotate(5deg);
+  }
+  20%{
+    transform: rotate(-5deg);
+  }
+  30%{
+    transform: rotate(5deg);
+  }
+  40%{
+    transform: rotate(-5deg);
+  }
+  50%{
+    transform: rotate(3deg);
+  }
+  60%{
+    transform: rotate(-3deg);
+  }
+  70%{
+    transform: rotate(3deg);
+  }
+  80%{
+    transform: rotate(-3deg);
+  }
+  90%{
+    transform: rotate(3deg);
+  }
+  100%{
+    transform: rotate(-3deg);
+    left: 180%;
+  }
+}
+
+.crabs {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  z-index: -100;
+  .crab {
+    top: 275px;
+    background: tomato;
+    background: -webkit-linear-gradient(tomato, orange);
+    background: -o-linear-gradient(tomato, orange);
+    background: -moz-linear-gradient(tomato, orange);
+    background: linear-gradient(tomato, orange);
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-left: 85px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    animation: crawl 5s infinite 1s       alternate ease-in-out;
+  }
+
+  .crabeyes {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 70px;
+    top: -15px;
+  }
+
+  .eye {
+    border: solid 2px grey;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: white;
+    margin: 15px;
+    position: absolute;
+    top: -4%;
+    left: -50%;
+    animation: eye 3s infinite 1s alternate ease-in-out;
+    &:first-of-type {
+      left: 80%;
+    }
+    .pupil {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+
+  .mouth {
+    border: 2px solid orange;
+    margin-top: 30px;
+    width: 30px;
+    height: 20px;
+    background: black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    animation: mouth 1s infinite 1s alternate ease-in-out;
+  }
+
+  .bottomclawl {
+    background: tomato;
+    background: -webkit-linear-gradient(tomato, orange);
+    background: -o-linear-gradient(tomato, orange);
+    background: -moz-linear-gradient(tomato, orange);
+    background: linear-gradient(tomato, orange);
+    overflow: hidden;
+    display: block;
+    top: 12px;
+    left: 210px;
+    position: absolute;
+    width: 70px;
+    height: 28px;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(-45deg);
+  }
+
+  .legs {
+    z-index: -100;
+  }
+
+  .topclawl {
+    border: 2px solid orange;
+    background: tomato;
+    position: absolute;
+    left: 195px;
+    width: 60px;
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(-45deg);
+    animation: clawl 1s infinite alternate ease-in-out;
+  }
+
+  .topclawr {
+    border: 2px solid orange;
+    background: tomato;
+    position: absolute;
+    left: -53px;
+    width: 60px;
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(-45deg);
+    animation: clawr 1s infinite alternate ease-in-out;
+  }
+
+  .bottomclawr {
+    background: tomato;
+    background: -webkit-linear-gradient(tomato, orange);
+    background: -o-linear-gradient(tomato, orange);
+    background: -moz-linear-gradient(tomato, orange);
+    background: linear-gradient(tomato, orange);
+    overflow: hidden;
+    display: block;
+    top: 12px;
+    left: -75px;
+    position: absolute;
+    width: 70px;
+    height: 28px;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(45deg);
+  }
+
+  .left-leg1 {
+    position: absolute;
+    top: 80px;
+    left: 12px;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    border-top: 40px solid tomato;
+    border-right: 25px solid transparent;
+    animation: leftlegs .5s infinite 1s           alternate ease-in-out;
+  }
+
+  .left-leg2 {
+    position: absolute;
+    top: 85px;
+    z-index: -10;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-top: 40px solid tomato;
+    border-right: 25px solid transparent;
+    animation: leftlegs .75s infinite            alternate ease-in-out;
+  }
+
+  .right-leg1 {
+    position: absolute;
+    top: 85px;
+    left: 145px;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    border-top: 40px solid tomato;
+    border-left: 25px solid transparent;
+    animation: rightlegs .5s infinite 1s           alternate ease-in-out;
+  }
+
+  .right-leg2 {
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    border-top: 40px solid tomato;
+    border-left: 25px solid transparent;
+    animation: rightlegs .75s infinite            alternate ease-in-out;
+  }
+}

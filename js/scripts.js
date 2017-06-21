@@ -6,13 +6,13 @@ $(document).ready(function() {
   $('.hamburger').click(function () {
     // get random number from 1 to (number of jokes)
     var random = getRandomArbitrary(1, 24);
-    var randomAnime = getRandomArbitrary(1, 3);
+    var randomAnime = getRandomArbitrary(1, 6);
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
       $('.answer').show('slide', {direction: 'left'}, 1000);
       $('.headtop').removeClass('head-open'); //remove class so head can open again
-      $('.animation' + randomAnime).show();
+      $('.animation' + randomAnime).show(); //generate random animation
       $('.hamburger').addClass("unclickable"); //disable hamburger button for 1.2 seconds
       setTimeout(function(){
         $('.hamburger').removeClass('unclickable');
