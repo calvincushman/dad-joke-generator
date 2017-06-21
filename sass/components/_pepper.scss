@@ -1,0 +1,54 @@
+.pepperContain {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: none;
+}
+.pepper {
+  transition: all 4s;
+ animation: flex 2s ease-out infinite;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+width: 150px;
+height: 280px;
+position: absolute;
+  top: 150px;
+  left: 80px;
+-webkit-border-radius: 50% / 20% 20% 80% 80%;
+border-radius: 50% / 20% 20% 80% 80%;
+  background: -webkit-linear-gradient(left, #B2C17E , #4e7211); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #B2C17E, #4e7211); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #B2C17E, #4e7211); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #B2C17E , #4e7211); /* Standard syntax */
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
+}
+.stem {
+  background-color: -webkit-linear-gradient(left, black , green); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, black, green); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, black, green); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, black , green); /* Standard syntax */;
+  border-top-right-radius: 100px;
+  border-radius: 100% / 10 0% 10% 10% 10%;
+  width: 15px;
+  height: 140px;
+  position: absolute;
+  top: -125px;
+  left: 72px;
+}
+.base {
+  width: 80px;
+  height: 15px;
+  transform: rotate(180deg);
+  border-radius: 100% / 10% 10% 50% 50%;
+   background: linear-gradient(to right, black , green); /* Standard syntax */;
+    position: absolute;
+    left: 35px;
+}
+
+@keyframes flex {
+  0% {transform: rotate(-10deg)}
+  50% {transform: rotate(10deg)}
+  100% {transform: rotate(-10deg)}
+}
