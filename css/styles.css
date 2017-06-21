@@ -189,6 +189,7 @@
   top: 72.8%;
   left: 50%;
   transform: translate(-50%, -27.2%);
+  z-index: 1000;
 }
 
 .top-bun {
@@ -1178,6 +1179,137 @@
     top: 45%;
   }
 }
+@keyframes steam {
+  0% {
+    opacity: .309;
+    transform: skew(-5deg);
+  }
+  20% {
+    opacity: .1;
+    transform: skew(10deg);
+    transform: translate(25px);
+  }
+  40% {
+    opacity: .1;
+    transform: skew(-10deg);
+  }
+  50% {
+    transform: translate(0 10px);
+  }
+  60% {
+    opacity: .1;
+    transform: skew(-20deg);
+  }
+  80% {
+    opacity: .4;
+    transform: skew(-10deg);
+    transform: translate(-25px);
+  }
+  100% {
+    opacity: .1;
+    transform: skew(10deg);
+    transform: translate(-5px);
+  }
+}
+.steak {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.steak .meat {
+  margin-top: 300px;
+  margin-left: 400px;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border-radius: 40% 20% 30% 90%;
+  background: #4f3324;
+  background: -webkit-linear-gradient(#4f3324, #472817);
+  background: -o-linear-gradient(#4f3324, #472817);
+  background: -moz-linear-gradient(#4f3324, #472817);
+  background: linear-gradient(#4f3324, #472817);
+}
+.steak .top {
+  position: absolute;
+  border-radius: 20% 20% 20% 70%;
+  left: 7%;
+  top: 4%;
+  height: 60%;
+  width: 90%;
+  background: #7c5540;
+  background: -webkit-linear-gradient(#7c5540, #754024);
+  background: -o-linear-gradient(#7c5540, #754024);
+  background: -moz-linear-gradient(#7c5540, #754024);
+  background: linear-gradient(#7c5540, #754024);
+}
+.steak .line1 {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  height: 10%;
+  width: 30%;
+  transform: rotate(55deg);
+}
+.steak .line2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  height: 10%;
+  width: 40%;
+  transform: rotate(55deg);
+}
+.steak .line3 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  height: 10%;
+  width: 40%;
+  transform: rotate(55deg);
+}
+.steak .line4 {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  height: 10%;
+  width: 30%;
+  transform: rotate(55deg);
+}
+.steak .line5 {
+  position: absolute;
+  top: 35%;
+  left: 1%;
+  height: 10%;
+  width: 20%;
+  transform: rotate(55deg);
+}
+.steak .line {
+  border-radius: 30%;
+  background: #3d312b;
+}
+.steak .steam {
+  position: absolute;
+  width: 1.2%;
+  height: 90%;
+  bottom: 70%;
+  border-radius: 30%;
+  background: #444;
+  opacity: .4;
+  z-index: 5;
+  animation: steam 6s infinite;
+  top: -20%;
+  margin-left: 30%;
+}
+.steak .steam1 {
+  left: 50%;
+}
+.steak .steam2 {
+  left: 42%;
+}
+.steak .steam3 {
+  left: 33%;
+}
+
 body {
   overflow: hidden;
   background-image: url(../img/background.png);

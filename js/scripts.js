@@ -6,7 +6,7 @@ $(document).ready(function() {
   $('.hamburger').click(function () {
     // get random number from 1 to (number of jokes)
     var random = getRandomArbitrary(1, 24);
-    var randomAnime = getRandomArbitrary(1, 7);
+    var randomAnime = getRandomArbitrary(1, 8);
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
