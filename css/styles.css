@@ -32,7 +32,7 @@
   z-index: -2;
 }
 
-.head-animation {
+.head-open {
   animation: headopen 3s forwards;
 }
 
@@ -99,7 +99,6 @@
   }
 }
 .moustache {
-  display: none;
   top: 82%;
   left: -190px;
   position: absolute;
@@ -468,13 +467,12 @@
   opacity: 0;
 }
 
-.tp-animation {
+.tp-activate {
   animation: roll-animation 4s ease-out 1 forwards;
   z-index: 100;
 }
 
 #catContain {
-  display: none;
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -624,8 +622,8 @@
 @keyframes move {
   0%, 100% {
     left: 40%;
-    top: -30%;
-    transform: translate(-60%, 70%);
+    top: -60%;
+    transform: translate(-60%, 40%);
   }
   30%, 70% {
     left: 40%;
@@ -649,7 +647,6 @@
   position: absolute;
   top: 0%;
   left: 0%;
-  display: none;
 }
 
 .pepper {
@@ -785,6 +782,10 @@ h1 {
     transform: translate(-50%, -56%) rotate(-10deg);
   }
 }
+[class*='animation'] {
+  display: none;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
