@@ -1,0 +1,172 @@
+.bbq-contain {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .bbq {
+    width: 275px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: -10%;
+    animation: bbq 4s ease-in infinite;
+  }
+
+  .steak-bbq {
+    width: 150px;
+    right: -10%;
+    animation: steak 2s ease-in infinite;
+    position: absolute;
+  }
+
+  .dog {
+    width: 150px;
+    position: absolute;
+    left: -10%;
+    animation: dog 3s ease-in infinite;
+  }
+
+  .burg {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    animation: burg 3s ease-in infinite;
+  }
+
+  .bacon {
+    width: 150px;
+    position: absolute;
+    top: 15%;
+    left: -10%;
+    animation: bacon 3s ease-in infinite;
+  }
+}
+
+
+
+@keyframes bbq {
+  0% {
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: -10%;
+  }
+  20% {
+    top: 30%;
+    left: 20%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 70%;
+    left: 40%;
+    transform: rotate(-180deg);
+  }
+  60% {
+    top: 30%;
+    left: 60%;
+    transform: rotate(90deg);
+  }
+  80% {
+    top: 70%;
+    left: 80%;
+    transform: rotate(-180deg);
+  }
+  100% {
+    top: 50%;
+    left: 110%;
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes steak {
+   0% {
+  top: 45%;
+  transform: translate(-50%,-50%);
+  right: -100%;
+  transform: rotate(100deg);
+  }
+  20% {
+    top: 45%;
+    right: 20%;
+    transform: rotate(100deg);
+  }
+  40% {
+    top: 45%;
+    right: 40%;
+    transform: rotate(-100deg);
+  }
+  60% {
+    top: 45%;
+    right: 60%;
+    transform: rotate(100deg);
+  }
+  80% {
+    top: 45%;
+    right: 80%;
+    transform: rotate(-100deg);
+  }
+  100% {
+    top: 45%;
+    right: 110%;
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes dog {
+   0% {
+  top: 30%;
+  transform: translate(-50%,-50%);
+  left: -100%;
+  transform: rotate(100deg);
+  }
+  20% {
+    top: 25%;
+    left: 20%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 30%;
+    left: 40%;
+    transform: rotate(-180deg);
+  }
+  60% {
+    top: 25%;
+    left: 60%;
+    transform: rotate(180deg);
+  }
+  80% {
+    top: 30%;
+    left: 80%;
+    transform: rotate(-180deg);
+  }
+  100% {
+    top: 25%;
+    left: 110%;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes burg {
+  0% {
+    top: 55%;
+    right: -10%;
+  }
+  100% {
+    top: 55%;
+    right: 110%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bacon {
+  0% {
+    top: 15%;
+    left: -10%;
+  }
+  100% {
+    top: 15%;
+    left: 110%;
+    transform: rotate(360deg);
+  }
+}

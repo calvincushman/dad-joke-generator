@@ -4,9 +4,8 @@ function getRandomArbitrary(min, max) {
 
 $(document).ready(function() {
   $('.hamburger').click(function () {
-    // get random number from 1 to (number of jokes)
-    var randomJoke = getRandomArbitrary(1, 50);
-    var randomAnime = getRandomArbitrary(1, 11);
+    var randomJoke = getRandomArbitrary(1, 50); // get random number from 1 to (number of jokes)
+    var randomAnime = getRandomArbitrary(1, 13); // get random number from 1 to (number of animations)
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();

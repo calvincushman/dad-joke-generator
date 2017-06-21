@@ -1,0 +1,18 @@
+@keyframes fanny {
+  0%{
+    transform: scale(.3);
+  }
+  20%{
+   transform: rotate(360deg);
+  }
+  30%{
+   transform: rotate(-360deg);
+  }
+}
+.fanny {
+  position: absolute;
+  right: 0;
+  .fannypack {
+    animation: fanny 6s infinite;
+  }
+}

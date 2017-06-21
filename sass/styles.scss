@@ -1,24 +1,13 @@
-// vendors
-@import
-  'vendors/bourbon/bourbon';
-
-// abstracts
-@import
-  'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/placeholders',
-  'abstracts/variables';
-
 // base
 @import
   'base/reset',
-  'base/typography';
+  'base/media';
 
 // components
 @import
   'components/head',
   'components/jokes',
-  'components/moustache',
+  'components/golf',
   'components/buttons',
   'components/toilet-paper',
   'components/cat',
@@ -30,10 +19,11 @@
   'components/beercan',
   'components/rake',
   'components/lawnmower',
-  'components/hero';
+  'components/hero',
+  'components/fanny',
+  'components/bbq';
 
 // layout
 @import
-  'layout/header',
   'layout/body',
   'layout/container';
