@@ -67,109 +67,46 @@
   text-transform: uppercase;
 }
 
-@keyframes mou {
+@keyframes golfclub {
   0% {
-    left: -300%;
-    transform: rotate(45deg);
+    transform: rotate(195deg);
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: rotate(25deg);
+  50% {
+    transform: rotate(-40deg);
   }
-  20%, 40%, 60%, 80% {
-    transform: rotate(45deg);
+}
+@keyframes golfball {
+  0% {
+    transform: scale(0.01);
   }
   100% {
-    left: 400%;
-    transform: rotate(45deg);
+    transform: translateX(-40%);
   }
-}
-@keyframes stashe {
-  0% {
-    left: -352.5%;
-    transform: rotate(-45deg);
+  90% {
+    transform: scale(10);
+    opacity: 1;
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: rotate(-25deg);
-  }
-  20%, 40%, 60%, 80% {
-    transform: rotate(-45deg);
+  95% {
+    transform: translate(-1000%);
   }
   100% {
-    left: 347.5%;
-    transform: rotate(-45deg);
+    opacity: 0;
   }
 }
-.facial-hair {
-  z-index: -3;
-}
-.facial-hair .moustache {
-  top: 82%;
-  left: -190px;
+.golf {
   position: absolute;
-  width: 150px;
-  margin: 100px auto;
 }
-.facial-hair .mou, .facial-hair .stache, .facial-hair .mou:before, .facial-hair .stache:before {
-  background: #2f3245;
-  display: block;
-  height: 50px;
-  width: 75px;
+.golf .golfclub {
+  margin-left: 50%;
+  margin-top: 20%;
+  transform: rotate(-40deg);
+  animation: golfclub 3s;
 }
-.facial-hair .mou:before, .facial-hair .mou:after, .facial-hair .stache:before, .facial-hair .stache:after {
-  content: "\0020";
-  position: absolute;
-  height: 40px;
-  width: 50px;
-}
-.facial-hair .mou {
-  position: absolute;
-  left: 80px;
-  border-top-left-radius: 170px;
-  border-bottom-right-radius: 200px;
-  border-bottom-left-radius: 12px;
-  transform: rotate(45deg);
-  z-index: 5;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: mou 2.5s ease-in 2 alternate;
-}
-.facial-hair .mou:before {
-  left: 25px;
-  top: -40px;
-  z-index: 0;
-}
-.facial-hair .mou:after {
-  background: white;
-  border-bottom-right-radius: 50px;
-  left: 24px;
-  top: -50px;
-  z-index: 10;
-  height: 51px;
-  width: 51px;
-}
-.facial-hair .stache {
-  position: absolute;
-  border-top-right-radius: 170px;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 200px;
-  transform: rotate(-45deg);
-  z-index: 15;
-  left: 0;
-  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: stashe 2.5s ease-in 2 alternate;
-}
-.facial-hair .stache:before {
-  left: 0;
-  top: -40px;
-  z-index: 10;
-}
-.facial-hair .stache:after {
-  background: white;
-  border-bottom-left-radius: 50px;
-  left: 0;
-  top: -50px;
-  z-index: 20;
-  height: 51px;
-  width: 51px;
+.golf .golfball {
+  margin-left: 30%;
+  margin-top: -15%;
+  transform: scale(0.05);
+  animation: golfball 2s 1.3s forwards;
 }
 
 @keyframes dance {
@@ -1325,6 +1262,186 @@
   100% {
     left: 100%;
     bottom: 60%;
+  }
+}
+@keyframes fanny {
+  0% {
+    transform: scale(0.3);
+  }
+  20% {
+    transform: rotate(360deg);
+  }
+  30% {
+    transform: rotate(-360deg);
+  }
+}
+.fanny {
+  position: absolute;
+  right: 0;
+}
+.fanny .fannypack {
+  animation: fanny 6s infinite;
+}
+
+.bbq-contain {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.bbq-contain .bbq {
+  width: 275px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: -10%;
+  animation: bbq 4s ease-in infinite;
+}
+.bbq-contain .steak-bbq {
+  width: 150px;
+  right: -10%;
+  animation: steak 2s ease-in infinite;
+  position: absolute;
+}
+.bbq-contain .dog {
+  width: 150px;
+  position: absolute;
+  left: -10%;
+  animation: dog 3s ease-in infinite;
+}
+.bbq-contain .burg {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  animation: burg 3s ease-in infinite;
+}
+.bbq-contain .bacon {
+  width: 150px;
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  animation: bacon 3s ease-in infinite;
+}
+
+@keyframes bbq {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: -10%;
+  }
+  20% {
+    top: 30%;
+    left: 20%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 70%;
+    left: 40%;
+    transform: rotate(-180deg);
+  }
+  60% {
+    top: 30%;
+    left: 60%;
+    transform: rotate(90deg);
+  }
+  80% {
+    top: 70%;
+    left: 80%;
+    transform: rotate(-180deg);
+  }
+  100% {
+    top: 50%;
+    left: 110%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes steak {
+  0% {
+    top: 45%;
+    transform: translate(-50%, -50%);
+    right: -100%;
+    transform: rotate(100deg);
+  }
+  20% {
+    top: 45%;
+    right: 20%;
+    transform: rotate(100deg);
+  }
+  40% {
+    top: 45%;
+    right: 40%;
+    transform: rotate(-100deg);
+  }
+  60% {
+    top: 45%;
+    right: 60%;
+    transform: rotate(100deg);
+  }
+  80% {
+    top: 45%;
+    right: 80%;
+    transform: rotate(-100deg);
+  }
+  100% {
+    top: 45%;
+    right: 110%;
+    transform: rotate(100deg);
+  }
+}
+@keyframes dog {
+  0% {
+    top: 30%;
+    transform: translate(-50%, -50%);
+    left: -100%;
+    transform: rotate(100deg);
+  }
+  20% {
+    top: 25%;
+    left: 20%;
+    transform: rotate(180deg);
+  }
+  40% {
+    top: 30%;
+    left: 40%;
+    transform: rotate(-180deg);
+  }
+  60% {
+    top: 25%;
+    left: 60%;
+    transform: rotate(180deg);
+  }
+  80% {
+    top: 30%;
+    left: 80%;
+    transform: rotate(-180deg);
+  }
+  100% {
+    top: 25%;
+    left: 110%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes burg {
+  0% {
+    top: 55%;
+    right: -10%;
+  }
+  100% {
+    top: 55%;
+    right: 110%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes bacon {
+  0% {
+    top: 15%;
+    left: -10%;
+  }
+  100% {
+    top: 15%;
+    left: 110%;
+    transform: rotate(360deg);
   }
 }
 body {

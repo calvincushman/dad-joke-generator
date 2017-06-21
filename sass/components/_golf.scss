@@ -1,0 +1,44 @@
+@keyframes golfclub {
+  0%{
+    transform: rotate(195deg);
+  }
+  50%{
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes golfball {
+  0%{
+    transform: scale(.01);
+  }
+  100%{
+    transform: translateX(-40%);
+  }
+  90%{
+    transform: scale(10);
+    opacity: 1;
+  }
+  95%{
+    transform: translate(-1000%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.golf {
+  position: absolute;
+  .golfclub {
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: rotate(-40deg);
+    animation: golfclub 3s;
+  }
+
+  .golfball {
+    margin-left: 30%;
+    margin-top: -15%;
+    transform: scale(.05);
+    animation: golfball 2s 1.3s forwards;
+  }
+}
