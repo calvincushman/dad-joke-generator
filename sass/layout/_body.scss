@@ -67,3 +67,7 @@ h1 {
     transform: translate(-50%,-56%) rotate(-10deg);
   }
 }
+
+[class*='animation'] {
+  display: none;
+}

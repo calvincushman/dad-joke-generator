@@ -1,5 +1,4 @@
 #catContain {
-  display: none;
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -128,8 +127,8 @@
 @keyframes move {
   0%, 100% {
     left: 40%;
-    top: -30%;
-    transform: translate(-60%, 70%);
+    top: -60%;
+    transform: translate(-60%, 40%);
   } 30%, 70% {
     left: 40%;
     top: 40%;
