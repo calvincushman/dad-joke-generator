@@ -98,29 +98,29 @@
     transform: rotate(-45deg);
   }
 }
-.moustache {
+.facial-hair {
+  z-index: -3;
+}
+.facial-hair .moustache {
   top: 82%;
   left: -190px;
   position: absolute;
   width: 150px;
   margin: 100px auto;
 }
-
-.mou, .stache, .mou:before, .stache:before {
+.facial-hair .mou, .facial-hair .stache, .facial-hair .mou:before, .facial-hair .stache:before {
   background: #2f3245;
   display: block;
   height: 50px;
   width: 75px;
 }
-
-.mou:before, .mou:after, .stache:before, .stache:after {
+.facial-hair .mou:before, .facial-hair .mou:after, .facial-hair .stache:before, .facial-hair .stache:after {
   content: "\0020";
   position: absolute;
   height: 40px;
   width: 50px;
 }
-
-.mou {
+.facial-hair .mou {
   position: absolute;
   left: 80px;
   border-top-left-radius: 170px;
@@ -129,16 +129,14 @@
   transform: rotate(45deg);
   z-index: 5;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: mou 2.5s ease-in 2 alternate 1s;
+  animation: mou 2.5s ease-in 2 alternate;
 }
-
-.mou:before {
+.facial-hair .mou:before {
   left: 25px;
   top: -40px;
   z-index: 0;
 }
-
-.mou:after {
+.facial-hair .mou:after {
   background: white;
   border-bottom-right-radius: 50px;
   left: 24px;
@@ -147,8 +145,7 @@
   height: 51px;
   width: 51px;
 }
-
-.stache {
+.facial-hair .stache {
   position: absolute;
   border-top-right-radius: 170px;
   border-bottom-right-radius: 12px;
@@ -157,16 +154,14 @@
   z-index: 15;
   left: 0;
   box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
-  animation: stashe 2.5s ease-in 2 alternate 1s;
+  animation: stashe 2.5s ease-in 2 alternate;
 }
-
-.stache:before {
+.facial-hair .stache:before {
   left: 0;
   top: -40px;
   z-index: 10;
 }
-
-.stache:after {
+.facial-hair .stache:after {
   background: white;
   border-bottom-left-radius: 50px;
   left: 0;
@@ -998,13 +993,13 @@
   }
 }
 .coffeespill .mug {
-  top: 56.5%;
-  left: 65%;
+  top: 57%;
+  left: 41%;
   position: absolute;
   background: #dce0e8;
   width: 200px;
   height: 190px;
-  transform-origin: bottom left;
+  transform: translate(-59%, -43%);
   animation: spill 5s forwards;
 }
 .coffeespill .mug h1 {
@@ -1140,6 +1135,47 @@
 @keyframes withTie {
   100% {
     top: 345px;
+  }
+}
+.glove-contain .glove {
+  width: 150px;
+  position: absolute;
+  left: -100%;
+  top: 45%;
+  /*   transform: translate(90%,-55%) */
+  animation: mitt 3.37s 1;
+}
+.glove-contain .ball {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -100%;
+  top: 45%;
+  /*   transform: translate(90%) */
+  animation: ball 3.575s 1;
+}
+@keyframes mitt {
+  0% {
+    left: 110%;
+    top: 45%;
+  }
+  50% {
+    left: 56%;
+    top: 45%;
+  }
+  100% {
+    left: 110%;
+    top: 45%;
+  }
+}
+@keyframes ball {
+  0% {
+    left: -100%;
+    top: 45%;
+  }
+  100% {
+    left: 109%;
+    top: 45%;
   }
 }
 body {
