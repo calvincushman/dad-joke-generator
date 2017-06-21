@@ -50,7 +50,7 @@
   top: 90.8%;
   left: 28.5%;
   transform: translateY(-19.2%);
-  color: tomato;
+  color: #f7b243;
   padding: 22px 15px;
   padding-left: 30px;
   font-size: 1.2em;
@@ -957,140 +957,6 @@
   animation: rightlegs .75s infinite            alternate ease-in-out;
 }
 
-@keyframes spill {
-  0% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(-90deg);
-  }
-}
-@keyframes coffee {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 0%;
-  }
-  100% {
-    width: 300px;
-  }
-}
-@keyframes coffeedrool {
-  0% {
-    width: 0%;
-  }
-  70% {
-    width: 0%;
-  }
-  90% {
-    width: 6%;
-  }
-  100% {
-    width: 6%;
-  }
-}
-.coffeespill .mug {
-  top: 57%;
-  left: 41%;
-  position: absolute;
-  background: #dce0e8;
-  width: 200px;
-  height: 190px;
-  transform: translate(-59%, -43%);
-  animation: spill 5s forwards;
-}
-.coffeespill .mug h1 {
-  position: absolute;
-  top: 85px;
-  left: 85px;
-  font-family: impact;
-  font-size: 3em;
-}
-.coffeespill .bottom {
-  z-index: 100;
-  top: 165px;
-  position: absolute;
-  background: #dce0e8;
-  border-radius: 50%;
-  width: 200px;
-  height: 45px;
-}
-.coffeespill .top {
-  top: -20px;
-  position: absolute;
-  background: #dce0e8;
-  border-radius: 50%;
-  width: 200px;
-  height: 45px;
-}
-.coffeespill .coffeedrool {
-  top: 34%;
-  left: 5%;
-  position: absolute;
-  border-bottom-left-radius: 50%;
-  background: #775b47;
-  height: 8px;
-  width: 13px;
-  transform-origin: 0%;
-  transform: rotate(180deg);
-  animation: coffeedrool 3s ease-out forwards;
-}
-.coffeespill .tophole {
-  position: absolute;
-  width: 180px;
-  height: 45px;
-  top: 3px;
-  left: 10px;
-  border-radius: 50%;
-  background: #dce0e8;
-  background: -webkit-linear-gradient(#dce0e8, darkgray);
-  background: -o-linear-gradient(#dce0e8, darkgray);
-  background: -moz-linear-gradient(#dce0e8, darkgray);
-  background: linear-gradient(#dce0e8, darkgray);
-}
-.coffeespill .handle {
-  position: absolute;
-  top: 40px;
-  left: 190px;
-  background: #dce0e8;
-  width: 65px;
-  height: 110px;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-}
-.coffeespill .handlehole {
-  position: absolute;
-  background: white;
-  top: 25px;
-  left: 10px;
-  width: 30px;
-  height: 60px;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-}
-.coffeespill .coffee {
-  background: #513f33;
-  background: -webkit-linear-gradient(#775b47, #513f33);
-  background: -o-linear-gradient(#775b47, #513f33);
-  background: -moz-linear-gradient(#775b47, #513f33);
-  background: linear-gradient(#775b47, #513f33);
-  border-radius: 50%;
-  height: 30px;
-  width: 0px;
-  left: 41%;
-  top: 74%;
-  animation: coffee 3s forwards;
-  animation-delay: 1s;
-  transform-origin: 0%;
-  transform: translate(-59%, -26%);
-  position: absolute;
-  z-index: -1;
-}
-
 .tieContain {
   position: absolute;
   top: 54%;
@@ -1310,6 +1176,91 @@
   left: 33%;
 }
 
+.beer {
+  position: absolute;
+  width: 250px;
+  animation: swing 1s ease infinite;
+  animation: fly-beer 5s ease infinite;
+}
+
+@keyframes fly-beer {
+  0% {
+    left: -10%;
+    top: 45%;
+    transform: translate(90%, -55%);
+    transform: rotate(45deg);
+  }
+  25% {
+    left: 88%;
+    top: 45%;
+    transform: translate(90%, -55%);
+    transform: rotate(-45deg);
+  }
+  50% {
+    left: 1%;
+    top: 45%;
+    transform: translate(90%, -55%);
+    transform: rotate(45deg);
+  }
+  100% {
+    left: 110%;
+    top: 45%;
+    transform: translate(90%, -55%);
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 body {
   overflow: hidden;
   background-image: url(../img/background.png);
