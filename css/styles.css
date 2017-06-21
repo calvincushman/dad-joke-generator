@@ -957,51 +957,21 @@
   animation: rightlegs .75s infinite            alternate ease-in-out;
 }
 
-.tieContain {
+.football-contain img {
   position: absolute;
-  top: 54%;
-  left: 45%;
-  transform: translate(-55%, -46%);
-}
-.tieContain #knot {
-  position: absolute;
-  border-bottom: 50px solid blue;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  height: 0;
-  width: 100px;
-  transform: rotate(180deg);
-}
-.tieContain #neck {
-  position: absolute;
-  top: 45px;
-  border-bottom: 200px solid red;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  height: 0;
-  width: 100px;
-  animation: grow 2s;
-  z-index: -1;
-}
-.tieContain #diamond {
-  content: '';
-  position: absolute;
-  top: 245px;
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-top-color: red;
-  animation: withTie 2s;
+  bottom: 30%;
+  right: 30%;
+  width: 5%;
+  animation: toss 2s forwards;
 }
 
-@keyframes grow {
-  100% {
-    border-bottom: 300px solid red;
+@keyframes toss {
+  0% {
+    right: 30%;
   }
-}
-@keyframes withTie {
   100% {
-    top: 345px;
+    right: 50%;
+    width: 20%;
   }
 }
 .glove-contain .glove {
@@ -1259,6 +1229,100 @@
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+@keyframes rake {
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    transform: rotate(-30deg);
+  }
+  5%, 15%, 25%, 35%, 45%, 60%, 65%, 70%, 75%, 80%, 85% {
+    transform: translate(-20%);
+  }
+  20%, 40%, 60%, 80%, 100% {
+    transform: translate(-100%);
+  }
+}
+@keyframes leaves {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translate(-50%);
+  }
+  100% {
+    transform: translate(-200%);
+  }
+}
+.rake-contain {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+.rake-contain .rake {
+  margin-left: 500px;
+  width: 30%;
+  transform: rotateX(180deg);
+  animation: rake 6s infinite;
+}
+.rake-contain .leaves {
+  margin-left: -350px;
+  animation: leaves 6s infinite;
+}
+
+@keyframes grassy {
+  0% {
+    top: 400px;
+    left: 4%;
+  }
+  100% {
+    top: 400px;
+    left: 150%;
+  }
+}
+@keyframes lawn-mower {
+  0% {
+    top: 200px;
+    left: -10%;
+  }
+  100% {
+    top: 200px;
+    left: 150%;
+  }
+}
+.mow-contain {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+}
+.mow-contain .grass {
+  position: absolute;
+  width: 800px;
+  top: 400px;
+  left: -30%;
+  transform: translate(-50%, -50%);
+  animation: grassy 6s ease infinite;
+}
+.mow-contain .mower {
+  width: 300px;
+  position: absolute;
+  top: 180px;
+  left: -10%;
+  animation: lawn-mower 6s ease infinite;
+}
+
+#hero {
+  position: absolute;
+  animation: fly 5s forwards;
+  bottom: 10%;
+}
+
+@keyframes fly {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 100%;
+    bottom: 60%;
   }
 }
 body {
