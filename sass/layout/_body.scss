@@ -16,6 +16,10 @@ h1 {
   text-align: center;
   white-space: pre;
   pointer-events: none;
+  @include respond-to('vertical2') {
+    top: 8%;
+    transform: translate(-50%, -92%);
+  };
 }
 
 .tp-sheet {

@@ -24,6 +24,11 @@
     margin-top: -41%;
     z-index: -2;
   }
+  @include respond-to('vertical2') {
+    top: 43%;
+    left: 50.5%;
+    transform: translate(-49.5%, -57%) scale(.7);
+  };
 }
 
 .head-open {
