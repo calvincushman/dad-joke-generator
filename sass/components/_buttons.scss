@@ -8,15 +8,14 @@
     width: 330px;
   }
 }
-
 .hamburger {
   height: 200px;
   width: 300px;
   animation: dance 1s infinite 1s alternate ease-in-out;
   position: absolute;
-  top: 67%;
+  top: 72.8%;
   left: 50%;
-  transform: translate(-50%, -33%);
+  transform: translate(-50%, -27.2%);
 }
 
 .top-bun{
@@ -208,9 +207,10 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
   left: 50%;
 }
 
-.hamburger-active {
+.unclickable {
   animation: none;
   position: absolute;
+  pointer-events: none;
   .top-bun {
     height: 30px;
     width: 100px;

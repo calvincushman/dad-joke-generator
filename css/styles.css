@@ -8,9 +8,9 @@
   width: 400px;
   height: 400px;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50.5%;
-  transform: translate(-49.5%, -55%);
+  transform: translate(-49.5%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -192,9 +192,9 @@
   width: 300px;
   animation: dance 1s infinite 1s alternate ease-in-out;
   position: absolute;
-  top: 67%;
+  top: 72.8%;
   left: 50%;
-  transform: translate(-50%, -33%);
+  transform: translate(-50%, -27.2%);
 }
 
 .top-bun {
@@ -387,23 +387,24 @@
   left: 50%;
 }
 
-.hamburger-active {
+.unclickable {
   animation: none;
   position: absolute;
+  pointer-events: none;
 }
-.hamburger-active .top-bun {
+.unclickable .top-bun {
   height: 30px;
   width: 100px;
   top: 35%;
   left: 33%;
 }
-.hamburger-active .fillings {
+.unclickable .fillings {
   height: 15%;
   width: 35%;
   top: 37%;
   left: 32.5%;
 }
-.hamburger-active .fillings .cheese-triangle {
+.unclickable .fillings .cheese-triangle {
   bottom: -250%;
   height: 500%;
   width: 30%;
@@ -411,7 +412,7 @@
   transform: rotate(27deg);
   border-radius: 5px;
 }
-.hamburger-active .bottom-bun {
+.unclickable .bottom-bun {
   height: 22px;
   width: 100px;
   left: 33%;
@@ -421,13 +422,17 @@
 @keyframes roll-animation {
   0% {
     left: 50%;
-    top: 20%;
+    top: 25%;
     transform: translate(-50%, -75%) rotate(45deg);
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
   }
   15% {
     left: 70%;
     top: 15%;
-    transform: translate(-30%, -75%) rotate(90deg);
+    transform: translate(-30%, -85%) rotate(90deg);
   }
   30% {
     left: 90%;
@@ -448,6 +453,7 @@
     left: 28%;
     top: 89%;
     transform: translate(-72%, -21%);
+    opacity: 1;
   }
 }
 .roll-img {
@@ -464,7 +470,7 @@
 
 .tp-animation {
   animation: roll-animation 4s ease-out 1 forwards;
-  opacity: 1;
+  z-index: 100;
 }
 
 #catContain {
@@ -647,6 +653,18 @@ body {
   font-family: 'Pangolin', cursive;
 }
 
+h1 {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  white-space: pre;
+  pointer-events: none;
+}
+
 .tp-sheet {
   width: 45%;
   height: 140px;
@@ -659,40 +677,35 @@ body {
   z-index: -50;
 }
 
-.moose {
+#moose {
   position: absolute;
   width: 160px;
   height: auto;
-  top: 41.3%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, -58.7%);
-  animation: moose-30 30s 2s infinite;
-}
-
-.moose:hover {
-  animation: moose-hover .4s ease-in;
+  transform: translate(-50%, -55%);
 }
 
 @keyframes moose-hover {
   0%, 100% {
-    transform: translate(-50%, -58.7%);
+    transform: translate(-50%, -59%);
   }
   25%, 75% {
-    transform: translate(-50%, -58.7%) rotate(10deg);
+    transform: translate(-50%, -59%) rotate(10deg);
   }
   50% {
-    transform: translate(-50%, -58.7%) rotate(-10deg);
+    transform: translate(-50%, -59%) rotate(-10deg);
   }
 }
 @keyframes moose-30 {
   0%, 5%, 100% {
-    transform: translate(-50%, -58.7%);
+    transform: translate(-50%, -59%);
   }
   1.25%, 3.75% {
-    transform: translate(-50%, -58.7%) rotate(10deg);
+    transform: translate(-50%, -59%) rotate(10deg);
   }
   2.5% {
-    transform: translate(-50%, -58.7%) rotate(-10deg);
+    transform: translate(-50%, -59%) rotate(-10deg);
   }
 }
 .container {
@@ -700,18 +713,6 @@ body {
   height: 100vh;
   position: relative;
   display: flex;
-}
-
-h1 {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  width: 100%;
-  font-size: 1.5em;
-  text-align: center;
-  white-space: pre;
-  pointer-events: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
