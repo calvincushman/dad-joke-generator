@@ -4,18 +4,26 @@
   top: 90.8%;
   left: 28.5%;
   transform: translateY(-19.2%);
-  color: #f7b243;
-  padding: 22px 15px;
-  padding-left: 30px;
-  font-size: 1.2em;
+  color: black;
+  padding: 22px 0 22px 30px;
+  font-size: 1.5em;
   font-weight: bold;
   border-radius: 5px;
   border: 3px solid black;
   overflow: hidden;
   z-index: -100;
-  width: 44%;
+  width: 47%;
   text-align: center;
   background-repeat: repeat;
   background-image: url(../img/dotted-line2.png);
   background-size: 100px 40px;
+  background-color: white;
+  text-transform: uppercase;
 }
+
+// longest joke test
+
+// #buffalo {
+//   display: block;
+//   z-index: 100;
+// }

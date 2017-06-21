@@ -50,20 +50,21 @@
   top: 90.8%;
   left: 28.5%;
   transform: translateY(-19.2%);
-  color: #f7b243;
-  padding: 22px 15px;
-  padding-left: 30px;
-  font-size: 1.2em;
+  color: black;
+  padding: 22px 0 22px 30px;
+  font-size: 1.5em;
   font-weight: bold;
   border-radius: 5px;
   border: 3px solid black;
   overflow: hidden;
   z-index: -100;
-  width: 44%;
+  width: 47%;
   text-align: center;
   background-repeat: repeat;
   background-image: url(../img/dotted-line2.png);
   background-size: 100px 40px;
+  background-color: white;
+  text-transform: uppercase;
 }
 
 @keyframes mou {
@@ -453,7 +454,7 @@
 }
 .roll-img {
   width: 100px;
-  height: 120px;
+  height: 130px;
   position: absolute;
   left: 50%;
   top: 25%;
@@ -1051,7 +1052,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.5);
+  pointer-events: none;
 }
 .steak .meat {
   margin-top: 300px;
@@ -1346,7 +1348,7 @@ h1 {
 }
 
 .tp-sheet {
-  width: 45%;
+  width: 48%;
   height: 140px;
   border-radius: 5px;
   background: white;
