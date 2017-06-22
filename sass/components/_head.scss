@@ -24,12 +24,14 @@
     margin-top: -41%;
     z-index: -2;
   }
-  @include respond-to('vertical2') {
-    top: 43%;
-    left: 50.5%;
-    transform: translate(-49.5%, -57%) scale(.7);
+  @include respond-to ('big-change') {
+    display: none;
+  };
+  @include respond-to ('big-change2') {
+    display: none;
   };
 }
+
 
 .head-open {
   animation: headopen 3s forwards;
@@ -42,4 +44,48 @@
   50% {
     transform: translate(-16.3%, 2%) rotate(-45deg);
   }
+}
+
+.logo-text {
+  display: none;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include respond-to ('big-change') {
+    display: block;
+    @include respond-to ('portrait') {
+      top: 47%;
+      transform: translate(-50%, -53%);
+    };
+  };
+  @include respond-to ('big-change2') {
+    display: block;
+    @include respond-to ('portrait') {
+      top: 47%;
+      transform: translate(-50%, -53%);
+    };
+  };
+}
+
+.logo-text-head {
+  display: none;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include respond-to ('big-change') {
+    @include respond-to ('portrait') {
+      display: block;
+    };
+  };
+  @include respond-to ('big-change2') {
+    @include respond-to ('portrait') {
+      display: block;
+    };
+  };
 }

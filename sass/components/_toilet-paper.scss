@@ -36,48 +36,6 @@
   }
 }
 
-@keyframes roll-animation-vertical2{
-  0% {
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -75%) rotate(45deg);
-    opacity: 0;
-   }
-  1% {
-    opacity: 1;
-  }
-  15% {
-    left: 70%;
-    top: 15%;
-    transform: translate(-30%, -85%) rotate(90deg);
-    height: 180px;
-    width: 150px;
-   }
-  30%{
-    left: 90%;
-    top: 30%;
-    transform: translate(-10%, -70%) rotate(125deg);
-   }
-  90% {
-    left: 20%;
-    top: 60%;
-    transform: translate(-80%, -40%) rotate(-450deg);
-   }
-  95% {
-    left: 35%;
-    top: 55%;
-    transform: translate(-65%, -45%) rotate(-405deg);
-  }
-  100% {
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -40%) rotate(-270deg);
-    opacity: 1;
-    height: 280px;
-    width: 200px;
-  }
-}
-
 .roll-img {
   width: 100px;
   height: 130px;
@@ -87,12 +45,29 @@
   transform: translate(-50%, -80%) rotate(45deg);
   z-index: -3;
   opacity: 0;
+  @include respond-to ('big-change') {
+    opacity: 1;
+    top: 71%;
+    left: 15%;
+    transform: translate(-85%, -29%);
+    @include respond-to('portrait') {
+      display: none;
+    };
+  };
+  @include respond-to ('big-change2') {
+    opacity: 1;
+    top: 71%;
+    left: 15%;
+    transform: translate(-85%, -29%);
+    @include respond-to('portrait') {
+      display: none;
+    };
+  };
 }
-
+// @include respond-to ('landscape') {
+//   display: none;
+// };
 .tp-activate {
   animation: roll-animation 4s ease-out 1 forwards;
   z-index: 100;
-  @include respond-to('vertical2') {
-    animation: roll-animation-vertical2 4s ease-out 1 forwards;
-  };
 }

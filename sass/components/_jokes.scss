@@ -5,7 +5,11 @@
   left: 28.5%;
   transform: translateY(-19.2%);
   color: black;
-  padding: 22px 0 22px 30px;
+  padding-left: 30px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 5px;
@@ -19,11 +23,43 @@
   background-size: 100px 40px;
   background-color: white;
   text-transform: uppercase;
+  @include respond-to ('big-change') {
+    top: 73%;
+    left: 15%;
+    width: 80%;
+    font-size: 1.2em;
+    display: none;
+    @include respond-to('portrait') {
+      width: 90%;
+      left: 5%;
+      height: auto;
+      top: 78%;
+      padding: 10px;
+      font-size: 1.4em;
+      background: white;
+    }
+  };
+  @include respond-to ('big-change2') {
+    top: 73%;
+    left: 15%;
+    width: 80%;
+    font-size: 1.2em;
+    display: none;
+    @include respond-to('portrait') {
+      width: 90%;
+      left: 5%;
+      height: auto;
+      top: 78%;
+      padding: 10px;
+      font-size: 1.4em;
+      background: white;
+    }
+  };
 }
 
 // longest joke test
 
-// #buffalo {
-//   display: block;
-//   z-index: 100;
-// }
+#buffalo {
+  display: block;
+  z-index: 100;
+}
