@@ -203,6 +203,7 @@
 }
 .golf {
   position: absolute;
+  z-index: 5001;
 }
 .golf .golfclub {
   margin-left: 50%;
@@ -1108,7 +1109,7 @@
     right: 30%;
   }
   100% {
-    right: 50%;
+    right: 65%;
     width: 20%;
   }
 }
