@@ -115,7 +115,7 @@
   left: 28.5%;
   transform: translateY(-19.2%);
   color: black;
-  padding-left: 30px;
+  padding-left: 10px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -140,7 +140,6 @@
     left: 15%;
     width: 80%;
     font-size: 1.2em;
-    display: none;
   }
 }
 @media (max-width: 1100px) and (orientation: portrait) {
@@ -1186,12 +1185,21 @@
     transform: translate(-5px);
   }
 }
+@keyframes steak-enter {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 50%;
+  }
+}
 .steak {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.3);
   pointer-events: none;
+  animation: steak-enter 2s forwards;
 }
 .steak .meat {
   margin-top: 300px;
@@ -1461,7 +1469,7 @@
     left: -500px;
   }
   100% {
-    left: 100%;
+    left: 110%;
     bottom: 60%;
   }
 }
