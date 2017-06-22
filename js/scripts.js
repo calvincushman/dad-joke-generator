@@ -10,7 +10,7 @@ $(document).ready(function() {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
       $('.answer').show('slide', {direction: 'left'}, 1000);
-      $('body').append("<audio autoplay>" + "<source src='badum/Badum-tss.mp3' type='audio/mpeg'>" + "</audio>")//generate random animation
+      $('body').append("<audio autoplay>" + "<source src='badum/Badum-tss.mp3' type='audio/mpeg'>" + "</audio>");//generate random animation
       $('.headtop').removeClass('head-open'); //remove class so head can open again
       $('.animation' + randomAnime).show();
       $('.hamburger').addClass("unclickable"); //disable hamburger button for 1.2 seconds
@@ -37,6 +37,22 @@ $(document).ready(function() {
           $(".roll-img").addClass("tp-activate"); //tp flys out of head after 1 second
       }, 1000);
       $("[class*='animation']").hide(); //hide all animations
+    }
+  });
+
+  $('.button-small').click(function () {
+    var randomJoke = getRandomArbitrary(1, 50); // get random number from 1 to (number of jokes)
+    if ($(this).hasClass('mobile-button-active')) {
+      $(this).removeClass('mobile-button-active'); //keeps track of state
+      $('.question').hide();
+      $('.answer').show();
+      $('body').append("<audio autoplay>" + "<source src='badum/Badum-tss.mp3' type='audio/mpeg'>" + "</audio>");//generate random animation
+    } else {
+      $(this).addClass('mobile-button-active'); //keeps track of state
+      $('[class*="joke"]').hide(); //hide all old jokes
+      $('.joke' + randomJoke).show();
+      $('.answer').hide();
+      $('.question').show();
     }
   });
 });
