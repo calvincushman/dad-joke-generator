@@ -4,8 +4,11 @@ function getRandomArbitrary(min, max) {
 
 $(document).ready(function() {
   $('.hamburger').click(function () {
+
     var randomJoke = getRandomArbitrary(1, 50); // get random number from 1 to (number of jokes)
     var randomAnime = getRandomArbitrary(1, 13); // get random number from 1 to (number of animations)
+
+
     if ($(this).hasClass('hamburger-active')) {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
@@ -18,6 +21,7 @@ $(document).ready(function() {
         $('.hamburger').removeClass('unclickable');
       }, 1200); //end of disable hamurger function
     } else {
+        $('body').append("<audio autoplay class='audio'>" + "<source src='badum/fart-05.mp3' type='audio/mpeg'>" + "</audio>");
       $(this).addClass('hamburger-active'); //keeps track of state
       $(".roll-img").removeClass("tp-activate");  //hide tp
       $('[class*="joke"]').hide(); //hide all old jokes
