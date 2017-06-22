@@ -176,11 +176,6 @@
   }
 }
 
-#buffalo {
-  display: block;
-  z-index: 100;
-}
-
 @keyframes golfclub {
   0% {
     transform: rotate(195deg);
@@ -476,7 +471,7 @@
   top: 62.9%;
 }
 
-button {
+.button-small {
   display: none;
   position: absolute;
   left: 50%;
@@ -499,28 +494,28 @@ button {
   background: linear-gradient(#fce083, #c79a05);
   /* Standard syntax */
 }
-button:hover {
+.button-small:hover {
   background: #f9c620;
 }
 @media (max-width: 1100px) {
-  button {
+  .button-small {
     display: block;
   }
 }
 @media (max-width: 1100px) and (orientation: portrait) {
-  button {
+  .button-small {
     top: 68%;
     width: 90%;
   }
 }
 
 @media (max-height: 900px) {
-  button {
+  .button-small {
     display: block;
   }
 }
 @media (max-height: 900px) and (orientation: portrait) {
-  button {
+  .button-small {
     top: 68%;
     width: 90%;
   }

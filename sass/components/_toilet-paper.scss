@@ -64,9 +64,6 @@
     };
   };
 }
-// @include respond-to ('landscape') {
-//   display: none;
-// };
 .tp-activate {
   animation: roll-animation 4s ease-out 1 forwards;
   z-index: 100;
