@@ -1,3 +1,4 @@
+//generates random number between two floating points
 function getRandomArbitrary(min, max) {
   return Math.round(Math.random() * (max - min)) + min;
 }
@@ -19,7 +20,7 @@ $(document).ready(function() {
       $('.hamburger').addClass("unclickable"); //disable hamburger button for 1.2 seconds
       setTimeout(function(){
         $('.hamburger').removeClass('unclickable');
-      }, 1200); //end of disable hamurger function
+      }, 1200); //end of disable hamburger function
     } else {
         $('body').append("<audio autoplay class='audio'>" + "<source src='badum/fart-05.mp3' type='audio/mpeg'>" + "</audio>");
       $(this).addClass('hamburger-active'); //keeps track of state
@@ -33,12 +34,12 @@ $(document).ready(function() {
       $('.hamburger').addClass("unclickable"); //disable hamburger button for 5.2 seconds
       setTimeout(function(){
         $('.hamburger').removeClass('unclickable');
-      }, 5200); //end of disable hamurger function
+      }, 5200); //end of disable hamburger function
       $('.answer').hide();
       $('.question').show('slide', {direction: 'left'}, 1000);
       $('.headtop').addClass('head-open'); //open head
       setTimeout(function(){
-          $(".roll-img").addClass("tp-activate"); //tp flys out of head after 1 second
+          $(".roll-img").addClass("tp-activate"); //tp flies out of head after 1 second
       }, 1000);
       $("[class*='animation']").hide(); //hide all animations
     }
