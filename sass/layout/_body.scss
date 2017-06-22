@@ -4,6 +4,12 @@ body {
   background-size: cover;
   background-position: center;
   font-family: 'Pangolin', cursive;
+  @include respond-to ('big-change') {
+    background-image: url(../img/mobile.png);
+  };
+  @include respond-to ('big-change2') {
+    background-image: url(../img/mobile.png);
+  };
 }
 
 h1 {
@@ -16,9 +22,11 @@ h1 {
   text-align: center;
   white-space: pre;
   pointer-events: none;
-  @include respond-to('vertical2') {
-    top: 8%;
-    transform: translate(-50%, -92%);
+  @include respond-to ('big-change') {
+    display: none;
+  };
+  @include respond-to ('big-change2') {
+    display: none;
   };
 }
 
@@ -32,6 +40,12 @@ h1 {
   top: 87%;
   left: 28%;
   z-index: -50;
+  @include respond-to ('big-change') {
+    display: none;
+  };
+  @include respond-to ('big-change2') {
+    display: none;
+  };
 }
 
 #moose {

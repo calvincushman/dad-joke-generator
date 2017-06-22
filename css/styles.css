@@ -31,11 +31,14 @@
   margin-top: -41%;
   z-index: -2;
 }
+@media (max-width: 1100px) {
+  .head {
+    display: none;
+  }
+}
 @media (max-height: 900px) {
   .head {
-    top: 43%;
-    left: 50.5%;
-    transform: translate(-49.5%, -57%) scale(0.7);
+    display: none;
   }
 }
 
@@ -51,6 +54,60 @@
     transform: translate(-16.3%, 2%) rotate(-45deg);
   }
 }
+.logo-text {
+  display: none;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1100px) {
+  .logo-text {
+    display: block;
+  }
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  .logo-text {
+    top: 47%;
+    transform: translate(-50%, -53%);
+  }
+}
+
+@media (max-height: 900px) {
+  .logo-text {
+    display: block;
+  }
+}
+@media (max-height: 900px) and (orientation: portrait) {
+  .logo-text {
+    top: 47%;
+    transform: translate(-50%, -53%);
+  }
+}
+
+.logo-text-head {
+  display: none;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  .logo-text-head {
+    display: block;
+  }
+}
+
+@media (max-height: 900px) and (orientation: portrait) {
+  .logo-text-head {
+    display: block;
+  }
+}
+
 [class*="joke"] {
   display: none;
   position: absolute;
@@ -58,7 +115,11 @@
   left: 28.5%;
   transform: translateY(-19.2%);
   color: black;
-  padding: 22px 0 22px 30px;
+  padding-left: 30px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 5px;
@@ -72,6 +133,52 @@
   background-size: 100px 40px;
   background-color: white;
   text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+  [class*="joke"] {
+    top: 73%;
+    left: 15%;
+    width: 80%;
+    font-size: 1.2em;
+    display: none;
+  }
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  [class*="joke"] {
+    width: 90%;
+    left: 5%;
+    height: auto;
+    top: 78%;
+    padding: 10px;
+    font-size: 1.4em;
+    background: white;
+  }
+}
+
+@media (max-height: 900px) {
+  [class*="joke"] {
+    top: 73%;
+    left: 15%;
+    width: 80%;
+    font-size: 1.2em;
+    display: none;
+  }
+}
+@media (max-height: 900px) and (orientation: portrait) {
+  [class*="joke"] {
+    width: 90%;
+    left: 5%;
+    height: auto;
+    top: 78%;
+    padding: 10px;
+    font-size: 1.4em;
+    background: white;
+  }
+}
+
+#buffalo {
+  display: block;
+  z-index: 100;
 }
 
 @keyframes golfclub {
@@ -136,11 +243,14 @@
   transform: translate(-50%, -27.2%);
   z-index: 1000;
 }
+@media (max-width: 1100px) {
+  .hamburger {
+    display: none;
+  }
+}
 @media (max-height: 900px) {
   .hamburger {
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -40%) scale(0.7);
+    display: none;
   }
 }
 
@@ -366,6 +476,60 @@
   top: 62.9%;
 }
 
+button {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -70%);
+  font-size: 1.9em;
+  font-family: 'Pangolin', cursive;
+  padding: 15px 0px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  box-shadow: 3px 3px 5px grey;
+  width: 50%;
+  background: -webkit-linear-gradient(#fce083, #c79a05);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#fce083, #c79a05);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#fce083, #c79a05);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#fce083, #c79a05);
+  /* Standard syntax */
+}
+button:hover {
+  background: #f9c620;
+}
+@media (max-width: 1100px) {
+  button {
+    display: block;
+  }
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  button {
+    top: 68%;
+    width: 90%;
+  }
+}
+
+@media (max-height: 900px) {
+  button {
+    display: block;
+  }
+}
+@media (max-height: 900px) and (orientation: portrait) {
+  button {
+    top: 68%;
+    width: 90%;
+  }
+}
+
+.mobile-button-active {
+  background: #f9c620;
+}
+
 @keyframes roll-animation {
   0% {
     left: 50%;
@@ -403,47 +567,6 @@
     opacity: 1;
   }
 }
-@keyframes roll-animation-vertical2 {
-  0% {
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -75%) rotate(45deg);
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  15% {
-    left: 70%;
-    top: 15%;
-    transform: translate(-30%, -85%) rotate(90deg);
-    height: 180px;
-    width: 150px;
-  }
-  30% {
-    left: 90%;
-    top: 30%;
-    transform: translate(-10%, -70%) rotate(125deg);
-  }
-  90% {
-    left: 20%;
-    top: 60%;
-    transform: translate(-80%, -40%) rotate(-450deg);
-  }
-  95% {
-    left: 35%;
-    top: 55%;
-    transform: translate(-65%, -45%) rotate(-405deg);
-  }
-  100% {
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -40%) rotate(-270deg);
-    opacity: 1;
-    height: 280px;
-    width: 200px;
-  }
-}
 .roll-img {
   width: 100px;
   height: 130px;
@@ -454,15 +577,37 @@
   z-index: -3;
   opacity: 0;
 }
+@media (max-width: 1100px) {
+  .roll-img {
+    opacity: 1;
+    top: 71%;
+    left: 15%;
+    transform: translate(-85%, -29%);
+  }
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  .roll-img {
+    display: none;
+  }
+}
+
+@media (max-height: 900px) {
+  .roll-img {
+    opacity: 1;
+    top: 71%;
+    left: 15%;
+    transform: translate(-85%, -29%);
+  }
+}
+@media (max-height: 900px) and (orientation: portrait) {
+  .roll-img {
+    display: none;
+  }
+}
 
 .tp-activate {
   animation: roll-animation 4s ease-out 1 forwards;
   z-index: 100;
-}
-@media (max-height: 900px) {
-  .tp-activate {
-    animation: roll-animation-vertical2 4s ease-out 1 forwards;
-  }
 }
 
 #catContain {
@@ -1512,6 +1657,16 @@ body {
   background-position: center;
   font-family: 'Pangolin', cursive;
 }
+@media (max-width: 1100px) {
+  body {
+    background-image: url(../img/mobile.png);
+  }
+}
+@media (max-height: 900px) {
+  body {
+    background-image: url(../img/mobile.png);
+  }
+}
 
 h1 {
   position: absolute;
@@ -1524,10 +1679,14 @@ h1 {
   white-space: pre;
   pointer-events: none;
 }
+@media (max-width: 1100px) {
+  h1 {
+    display: none;
+  }
+}
 @media (max-height: 900px) {
   h1 {
-    top: 8%;
-    transform: translate(-50%, -92%);
+    display: none;
   }
 }
 
@@ -1541,6 +1700,16 @@ h1 {
   top: 87%;
   left: 28%;
   z-index: -50;
+}
+@media (max-width: 1100px) {
+  .tp-sheet {
+    display: none;
+  }
+}
+@media (max-height: 900px) {
+  .tp-sheet {
+    display: none;
+  }
 }
 
 #moose {

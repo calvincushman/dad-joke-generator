@@ -17,10 +17,11 @@
   left: 50%;
   transform: translate(-50%, -27.2%);
   z-index: 1000;
-  @include respond-to('vertical2') {
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -40%) scale(.7);
+  @include respond-to ('big-change') {
+    display: none;
+  };
+  @include respond-to ('big-change2') {
+    display: none;
   };
 }
 
@@ -243,4 +244,49 @@ clip-path: polygon(71% 0, 0% 100%, 100% 100%);
     left: 33%;
     top: 62.9%;
   }
+}
+
+button {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -70%);
+  font-size: 1.9em;
+  font-family: 'Pangolin', cursive;
+  padding: 15px 0px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  box-shadow: 3px 3px 5px grey;
+  width: 50%;
+  // text-shadow: 3px 3px 3px black;
+  background: -webkit-linear-gradient(lighten(#E0AD06, 30%), darken(#E0AD06,5%)) ; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lighten(#E0AD06, 30%), darken(#E0AD06,5%)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lighten(#E0AD06, 30%), darken(#E0AD06,5%)) ; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lighten(#E0AD06, 30%), darken(#E0AD06,5%)) ; /* Standard syntax */
+  &:hover {
+    background: lighten(#E0AD06, 10%);
+  }
+  @include respond-to ('big-change') {
+    display: block;
+    @include respond-to ('portrait') {
+      top: 68%;
+      width: 90%;
+    }
+  };
+  @include respond-to ('big-change2') {
+    display: block;
+    @include respond-to ('portrait') {
+      top: 68%;
+      width: 90%;
+    }
+  };
+}
+
+
+
+
+.mobile-button-active {
+  background: lighten(#E0AD06, 10%);
 }

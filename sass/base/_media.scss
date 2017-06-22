@@ -18,6 +18,7 @@
 }
 
 $breakpoints: (
-  'large': (min-width: 1000px),
-  'vertical2': (max-height: 900px),
+  'big-change': (max-width: 1100px),
+  'big-change2': (max-height: 900px),
+  'portrait': (orientation: portrait),
 );
