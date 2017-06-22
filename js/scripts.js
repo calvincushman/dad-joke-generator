@@ -54,7 +54,7 @@ $(document).ready(function() {
     } else {
       $(this).addClass('mobile-button-active'); //keeps track of state
       $('[class*="joke"]').hide(); //hide all old jokes
-      $('.joke' + randomJoke).show();
+      $('.joke' + randomJoke).css('display', 'flex');
       $('.answer').hide();
       $('.question').show();
     }
