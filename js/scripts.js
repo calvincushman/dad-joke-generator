@@ -10,8 +10,9 @@ $(document).ready(function() {
       $(this).removeClass('hamburger-active'); //keeps track of state
       $('.question').hide();
       $('.answer').show('slide', {direction: 'left'}, 1000);
+      $('body').append("<audio autoplay>" + "<source src='badum/Badum-tss.mp3' type='audio/mpeg'>" + "</audio>")//generate random animation
       $('.headtop').removeClass('head-open'); //remove class so head can open again
-      $('.animation' + randomAnime).show(); //generate random animation
+      $('.animation' + randomAnime).show();
       $('.hamburger').addClass("unclickable"); //disable hamburger button for 1.2 seconds
       setTimeout(function(){
         $('.hamburger').removeClass('unclickable');
